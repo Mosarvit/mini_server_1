@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node start.js"
+    "start": "NODE_ENV=local node start.js",
+    "start_staging": "NODE_ENV=staging node start.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "custom-env": "^2.0.1",
     "express": "^4.17.1"
   },
   "devDependencies": {

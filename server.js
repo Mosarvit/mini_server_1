@@ -1,18 +1,20 @@
 const express = require('express')
 const app = express()
-var request = require('request');
+var request = require('request')
+require('custom-env').env(true)
 
 app.get('/', function (req, res) {
   res.json({ message: 'Hello from Server 1!' })
 });
 
 app.get('/second', function (req, res) {
-  var newurl = 'http://mini_server_2_name:3002'
+  var server_2_host = process.env.SERVER_2_HOST
+  var newurl = 'http://' + server_2_host + ':3002'
   request(newurl).pipe(res)
 });
 
 app.get('/third', function (req, res) {
-  var newurl = 'http://localhost:3003'
+  var newurl = 'http://mini_server_3_name:3003'
   request(newurl).pipe(res)
 });
 
