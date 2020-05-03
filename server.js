@@ -7,7 +7,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/second', function (req, res) {
-  var newurl = 'http://localhost:3002'
+  var newurl = 'http://mini_server_2_name:3002'
   request(newurl).pipe(res)
 });
 
