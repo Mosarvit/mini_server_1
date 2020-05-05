@@ -13,13 +13,8 @@ app.get('/second', function (req, res) {
   request(newurl).pipe(res)
 });
 
-app.get('/httpthird', function (req, res) {
-  var newurl = 'http://mini-server-3:3003'
-  request(newurl).pipe(res)
-});
-
 app.get('/third', function (req, res) {
-  var newurl = 'mini-server-3:3003'
+  var newurl = 'http://mini-server-3:3003'
   request(newurl).pipe(res)
 });
 
