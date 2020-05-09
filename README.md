@@ -1,3 +1,3 @@
 # mini_server_1
 
-D2 6
+D2 7
